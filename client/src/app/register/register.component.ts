@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
   register() {
     this.accountService.register(this.model).subscribe({
       next: () => this.cancel(),
-      error: error => {console.log(error),this.toastr.error(error.error.errors.Password),this.toastr.error(error.error.errors.Username)}
+      error: error => console.log(error)
     })
   }
 
